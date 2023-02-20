@@ -98,7 +98,7 @@ app.patch('/orders/:id', checkUserId, methods,(request, response) => {
 
     //if(index < 0){
         //return response.status(404).json({message: "pedido inexistente"})
-    //}
+    //}o
 
     orders[index] = orderUpdated
 
