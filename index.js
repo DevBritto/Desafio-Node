@@ -3,11 +3,14 @@ const { request } = require('express')
 const express = require('express')
 const uuid = require('uuid')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3001
+const  cors = require('cors')
 app.use(express.json())
+app.use(cors())
 app.listen(port, () =>{
     console.log(`Server started on port ${port}`)
 })
+
 
 const orders = []
 
@@ -98,7 +101,7 @@ app.patch('/orders/:id', checkUserId, methods,(request, response) => {
 
     //if(index < 0){
         //return response.status(404).json({message: "pedido inexistente"})
-    //}o
+    //}
 
     orders[index] = orderUpdated
 
