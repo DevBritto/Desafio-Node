@@ -14,6 +14,10 @@ app.listen(port, () =>{
 
 const orders = []
 
+app.get("/", (req, res) => {
+   return res.json("hello world");
+});
+
 const checkUserId = ( request, response, next ) => {
     const { id } = request.params
 
