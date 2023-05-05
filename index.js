@@ -14,7 +14,7 @@ app.listen(port, () =>{
 
 const orders = []
 
-app.get("/", (req, res) => {
+app.get("/", (request, response) => {
    return res.json("hello world");
 });
 
